@@ -4,7 +4,7 @@
       echo '<button class="main-featured-posts-box__2-button my-button">Adventure</button>';
     }
   ?>
-  <a class="<?= $post['classname'] ?>-title-link" href=<?= $post['link'] ?>>
+  <a class="<?= $post['classname'] ?>-title-link" href='/post/'>
     <h3 class="<?= $post['classname'] ?>-title featured-posts-boxes-title"><?= $post['title'] ?></h3>
   </a>
   <p class="<?= $post['classname'] ?>-text featured-posts-box__text default-text"><?= $post['subtitle'] ?></p>

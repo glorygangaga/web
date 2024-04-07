@@ -169,16 +169,24 @@ body {
   gap: 20px; 
 }
 
-.main-featured-posts__box-1 {
-  background-image: url(../imgs/mainIng.png);
+.featured-posts-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.main-featured-posts-box__2 {
-  background-image: url(../imgs/fromTopDown.png);
+.featured-posts-image img {
+  position: relative;
+  z-index: -1;
+  max-width: 460px;
+  min-height: 280px;
 }
 
 .featured-posts-boxes {
   position: relative;
+  z-index: 1;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

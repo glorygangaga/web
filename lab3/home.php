@@ -3,20 +3,18 @@
     [
       'title' => 'The Road Ahead',
       'subtitle' => 'The road ahead might be paved - it might not be.',
-      'img_modifier' => './static/imgs/matVogels.png',
+      'img_modifier' => 'http://localhost:8001/static/imgs/matVogels.png',
       'author' => 'Mat Vogels',
       'when' => 'September 25, 2015',
       'classname' => 'main-featured-posts__box-1',
-      'link' => 'http://localhost:8001/post',
     ],
     [
       'title' => 'From Top Down',
       'subtitle' => 'Once a year, go someplace you’ve never been before.',
-      'img_modifier' => './static/imgs/williamWong.png',
+      'img_modifier' => 'http://localhost:8001/static/imgs/williamWong.png',
       'author' => 'William Wong',
       'when' => 'September 25, 2015',
       'classname' => 'main-featured-posts-box__2',
-      'link' => '#',
     ],
   ];
 ?>
@@ -30,17 +28,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./static/styles/style.css">
-  </head>
+    <link rel="stylesheet" href="/static/styles/style.css">
 
+  </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="header__main-part">
-          <a href="http://localhost:8001/home"><h2 class="logo">Escape.</h2></a>
+          <a href="/home"><h2 class="logo">Escape.</h2></a>
           <nav class="header__navigation">
             <ul class="header__main-part--lists">
-              <li class="header__main-part--list"><a href="http://localhost:8001/home">Home</a></li>
+              <li class="header__main-part--list"><a href="/home">Home</a></li>
               <li class="header__main-part--list"><a href="#">Categories</a></li>
               <li class="header__main-part--list"><a href="#">About</a></li>
               <li class="header__main-part--list"><a href="#">Contact</a></li>
@@ -101,14 +99,14 @@
           <div class="most-recent-boxes">
             <div class="most-recent-box most-recent-box-1">
               <div class="most-recent-box__inner">
-                <a href="#"><img class="most-recent-box__inner-image" src="./static/imgs/stillStanding.jpg" alt="stillStanding"></a>
+                <a href="#"><img class="most-recent-box__inner-image" src="/static/imgs/stillStanding.jpg"  alt="stillStanding"></a>
                 <div class="most-recent-box__inner-text">
                   <h3 class="most-recent-box__inner-text--title">Still Standing Tall</h3>
                   <p class="most-recent-box__inner-text--subtitle">Life begins at the end of your comfort zone.</p>
                 </div>
                 <div class="most-recent-box__inner-who">
                   <div class="most-recent-box__inner-who-info">
-                    <img src="./static/imgs/williamWong.png" alt="williamWong">
+                    <img src="/static/imgs/williamWong.png" alt="williamWong">
                     <p class="most-recent-box__inner-who--name">William Wong</p>
                   </div>
                   <p class="most-recent-box__inner-when">9/25/2015</p>
@@ -117,14 +115,14 @@
             </div>
             <div class="most-recent-box most-recent-box-2">
               <div class="most-recent-box__inner">
-                <a href="#"><img class="most-recent-box__inner-image" src="./static/imgs/sunnySide.png" alt="sunnySide"></a>
+                <a href="#"><img class="most-recent-box__inner-image" src="/static/imgs/sunnySide.png" alt="sunnySide"></a>
                 <div class="most-recent-box__inner-text">
                   <h3 class="most-recent-box__inner-text--title">Sunny Side Up</h3>
                   <p class="most-recent-box__inner-text--subtitle">No place is ever as bad as they tell you it’s going to be.</p>
                 </div>
                 <div class="most-recent-box__inner-who">
                   <div class="most-recent-box__inner-who-info">
-                    <img src="./static/imgs/matVogels.png" alt="matVogels">
+                    <img src="/static/imgs/matVogels.png" alt="matVogels">
                     <p class="most-recent-box__inner-who--name">Mat Vogels</p>
                   </div>
                   <p class="most-recent-box__inner-when">9/25/2015</p>
@@ -133,14 +131,14 @@
             </div>
             <div class="most-recent-box most-recent-box-3">
               <div class="most-recent-box__inner">
-                <a href="#"><img class="most-recent-box__inner-image" src="./static/imgs/watterFalls.png" alt="watterFalls"></a>
+                <a href="#"><img class="most-recent-box__inner-image" src="/static/imgs/watterFalls.png" alt="watterFalls"></a>
                 <div class="most-recent-box__inner-text">
                   <h3 class="most-recent-box__inner-text--title">Water Falls</h3>
                   <p class="most-recent-box__inner-text--subtitle">We travel not to escape life, but for life not to escape us.</p>
                 </div>
                 <div class="most-recent-box__inner-who">
                   <div class="most-recent-box__inner-who-info">
-                    <img src="./static/imgs/matVogels.png" alt="matVogels">
+                    <img src="/static/imgs/matVogels.png" alt="matVogels">
                     <p class="most-recent-box__inner-who--name">Mat Vogels</p>
                   </div>
                   <p class="most-recent-box__inner-when">9/25/2015</p>
@@ -149,14 +147,14 @@
             </div>
             <div class="most-recent-box most-recent-box-4">
               <div class="most-recent-box__inner">
-                <a href="#"><img class="most-recent-box__inner-image" src="./static/imgs/throughTheMist.png" alt="throughTheMist"></a>
+                <a href="#"><img class="most-recent-box__inner-image" src="/static/imgs/throughTheMist.png" alt="throughTheMist"></a>
                 <div class="most-recent-box__inner-text">
                   <h3 class="most-recent-box__inner-text--title">Through the Mist</h3>
                   <p class="most-recent-box__inner-text--subtitle">Travel makes you see what a tiny place you occupy in the world.</p>
                 </div>
                 <div class="most-recent-box__inner-who">
                   <div class="most-recent-box__inner-who-info">
-                    <img src="./static/imgs/williamWong.png" alt="williamWong">
+                    <img src="/static/imgs/williamWong.png" alt="williamWong">
                     <p class="most-recent-box__inner-who--name">William Wong</p>
                   </div>
                   <p class="most-recent-box__inner-when">9/25/2015</p>
@@ -165,14 +163,14 @@
             </div>
             <div class="most-recent-box most-recent-box-5">
               <div class="most-recent-box__inner">
-                <a href="#"><img class="most-recent-box__inner-image" src="./static/imgs/awakenEarly.png" alt="awakenEarly"></a>
+                <a href="#"><img class="most-recent-box__inner-image" src="/static/imgs/awakenEarly.png" alt="awakenEarly"></a>
                 <div class="most-recent-box__inner-text">
                   <h3 class="most-recent-box__inner-text--title">Awaken Early</h3>
                   <p class="most-recent-box__inner-text--subtitle">Not all those who wander are lost.</p>
                 </div>
                 <div class="most-recent-box__inner-who">
                   <div class="most-recent-box__inner-who-info">
-                    <img src="./static/imgs/matVogels.png" alt="matVogels">
+                    <img src="/static/imgs/matVogels.png" alt="matVogels">
                     <p class="most-recent-box__inner-who--name">Mat Vogels</p>
                   </div>
                   <p class="most-recent-box__inner-when">9/25/2015</p>
@@ -181,14 +179,14 @@
             </div>
             <div class="most-recent-box most-recent-box-6">
               <div class="most-recent-box__inner">
-                <a href="#"><img class="most-recent-box__inner-image" src="./static/imgs/tryItAlways.png" alt="tryItAlways"></a>
+                <a href="#"><img class="most-recent-box__inner-image" src="/static/imgs/tryItAlways.png" alt="tryItAlways"></a>
                 <div class="most-recent-box__inner-text">
                   <h3 class="most-recent-box__inner-text--title">Try it Always</h3>
                   <p class="most-recent-box__inner-text--subtitle">The world is a book, and those who do not travel read only one page.</p>
                 </div>
                 <div class="most-recent-box__inner-who">
                   <div class="most-recent-box__inner-who-info">
-                    <img src="./static/imgs/matVogels.png" alt="matVogels">
+                    <img src="/static/imgs/matVogels.png" alt="matVogels">
                     <p class="most-recent-box__inner-who--name">Mat Vogels</p>
                   </div>
                   <p class="most-recent-box__inner-when">9/25/2015</p>
