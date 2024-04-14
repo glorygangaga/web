@@ -1,5 +1,5 @@
 <div class="<?= $post['classname'] ?> featured-posts-boxes">
-  <a class="<?= $post['classname'] ?>-title-link title-link" href='/post/?id=<?= $post['id'] ?>'></a>
+  <a class="<?= $post['classname'] ?>-title-link title-link" href='/post?id=<?= $post['id'] ?>'></a>
   <?php if ($post['button']) {
     echo '<button class="main-featured-posts-box__2-button my-button">Adventure</button>';
   }

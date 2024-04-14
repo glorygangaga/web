@@ -40,17 +40,22 @@ function getAndPrintPostsFromDB(mysqli $conn) {
   return $finalArr;
 }
 
+function joinInAdminPanel(mysqli $conn, $dataAsArray) {
+  $sql = "SELECT * FROM admin WHERE email='{$dataAsArray['Email']}' AND password='{$dataAsArray['Password']}'";
+  $result = $conn->query($sql);
+  if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+      return TRUE;
+    } 
+  } else {
+    return FALSE;
+  }
+}
+
 $posts = [];
 $postRecent = [];
 
-$conn = createDBConnection();
-$exitpost = getAndPrintPostsFromDB($conn);
 
-foreach ($exitpost as $post) {
-  if ($post['featured'] == 1) $posts[] = $post;
-  else $postRecent[] = $post;
-}
 
-closeDBConnection($conn);
 
 ?>

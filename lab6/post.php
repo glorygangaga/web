@@ -1,6 +1,16 @@
 <?php
 include './data/fetchData.php';
 
+$conn = createDBConnection();
+$exitpost = getAndPrintPostsFromDB($conn);
+
+foreach ($exitpost as $post) {
+  if ($post['featured'] == 1) $posts[] = $post;
+  else $postRecent[] = $post;
+}
+closeDBConnection($conn);
+
+
 $isIt = TRUE;
 foreach($exitpost as $post) {
   if ($post['id'] === $_GET['id']) {
@@ -32,7 +42,8 @@ if ($isIt) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/styles/theRoadAhead.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles/post.css">
   </head>
   <body>
     <header class="header">
@@ -55,7 +66,6 @@ if ($isIt) {
         <div class="container">
           <div class="title-texts">
             <h1><?= $curPost['title'] ?></h1>
-            <?= $curPost['id']?>
             <p><?= $curPost['subtitle'] ?></p>
           </div>
         </div>
@@ -75,16 +85,29 @@ if ($isIt) {
     </main>
     <footer class="footer">
       <div class="container">
+        <div class="stay-in-touch">
+          <h1 class="stay-in-touch__title">Stay in Touch</h1>
+          <form class="sendEmail">
+            <input name="Email" class="sendEmail-input" type="text" placeholder="Enter your email address" require>
+            <button class="submitBtm" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bg">
         <div class="footer-nav">
-          <a href="/home"><h2 class="logo">Escape.</h2></a>
-          <nav class="navigation">
-            <ul>
-              <li><a href="/home">Home</a></li>
-              <li><a href="#">Categories</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
+          <div class="container">
+            <div class="footer-nav__inner">
+              <a href="/home"><h2 class="logo">Escape.</h2></a>
+              <nav class="footer-navigation">
+                <ul class="footer-navigation-lists">
+                  <li class="footer-navigation-list"><a href="/home">Home</a></li>
+                  <li class="footer-navigation-list"><a href="#">Categories</a></li>
+                  <li class="footer-navigation-list"><a href="#">About</a></li>
+                  <li class="footer-navigation-list"><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
