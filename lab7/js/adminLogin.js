@@ -17,6 +17,8 @@ function isEmail(email) {
   return email.trim().length > 8 && email.includes('@') && email.includes('.');
 }
 
+console.log(document.querySelector('.opened-pass').classList);
+
 function showPassword() {
   const { Password } = form;
   document.querySelector('.opened-pass').classList.toggle('show');

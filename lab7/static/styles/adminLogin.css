@@ -25,6 +25,13 @@ a {
   color: inherit
 }
 
+object {
+  position: relative;
+  z-index: -1;
+  max-width: 24px;
+  max-height: 24px;
+}
+
 body {
   font-family: 'Oxygen', sans-serif;
   /* font-family: 'Lora', serif; */
@@ -183,13 +190,17 @@ body {
 }
 
 .button--password {
-  cursor: pointer;
   position: absolute;
   right: 12px;
   top: 29px;
   content: '';
   background-color: transparent;
   border: none;
+  z-index: 2;
+}
+
+.button--password:focus {
+  outline: 2px solid rgba(221, 120, 63, 0.4);
 }
 
 .error-form--text {
@@ -213,6 +224,10 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
+}
+
+.alert-circle {
+  z-index: 0;
 }
 
 @media only screen and (max-width: 500px) {

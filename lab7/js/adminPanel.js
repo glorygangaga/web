@@ -11,6 +11,7 @@ const authorName = document.querySelector('.post-preview__author-text');
 const previewDate = document.querySelector('.post-preview__author-date');
 const BtnsRemoveImgs = document.querySelectorAll('.changeImg-remove');
 
+const fileNameImg = ['', ''];
 const ImgNames = [
   ['.author-img-output', '.preview__author-image'],
   ['.HeroImage-output', '.screen-text-image-output', '.HeroImage-output-sec', '.post-preview__image-output'],
@@ -67,6 +68,7 @@ function changeImage(e, ImgNames, noneImgNames) {
         Img.style.height = '100%';
       }, false
     );
+    fileNameImg[changeEl] = file.name;
     file && reader.readAsDataURL(file);
     if (AllNames.length <= 2) Img.style.borderRadius = '50%';
     else if (ImgName === '.HeroImage-output' || ImgName === '.HeroImage-output-sec') Img.style.borderRadius = '4px';
@@ -129,15 +131,23 @@ function checkInputs(e) {
   } else {
     document.querySelector('.form_errors').classList.remove('open-error');
     document.querySelector('.from-correct').classList.add('sended');
-    console.log({
-      'title': Title.value,
-      'subtitle': Description.value,
-      'author': Author.value,
-      'main_img_url': mainImg.src,
-      'author_url': authorImg.src,
-      'date': previewDate.innerHTML,
-      'button': false,
-      'content': Content.value,
+
+    fetch('http://localhost:8001/static/api.php', {
+      method: 'POST',
+      headers: {
+         'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        'title': Title.value,
+        'subtitle': Description.value,
+        'author': Author.value,
+        'image': mainImg.src,
+        'author_iamge': authorImg.src,
+        'main_img_url': `/static/imgs/${fileNameImg[1]}`,
+        'author_url': `/static/imgs/${fileNameImg[0]}`,
+        'date': previewDate.innerHTML,
+        'content': Content.value,
+      })
     });
   }
 }

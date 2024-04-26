@@ -91,10 +91,17 @@ body {
   border: none;
   background-color: transparent;
   border-radius: 8px;
+  position: relative;
+  z-index: 2;
 }
 
 .exit-btn:focus {
   outline: 2px solid rgba(221, 120, 63, 0.4);
+}
+
+object {
+  position: relative;
+  z-index: 0;
 }
 
 .new-post {
@@ -261,6 +268,11 @@ body {
   align-items: center;
   border: 1px dashed rgb(211, 211, 211);
   background: rgb(247, 247, 247);
+}
+
+.none-author-img {
+  max-width: 24px;
+  max-height: 24px;
 }
 
 .main-info__form input[type="file"] {
