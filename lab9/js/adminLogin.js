@@ -18,8 +18,6 @@ export function isEmail(email) {
   return re.test(email);
 }
 
-console.log(document.querySelector('.opened-pass').classList);
-
 function showPassword() {
   const { Password } = form;
   document.querySelector('.opened-pass').classList.toggle('show');
